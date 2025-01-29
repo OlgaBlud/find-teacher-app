@@ -1,0 +1,14 @@
+.linkList {
+  display: flex;
+  gap: 28px;
+}
+.navLinks {
+  line-height: 1.25;
+  color: var(--black);
+  transition: color 500ms ease-in-out;
+}
+
+.navLinks:hover,
+.navLinks.active {
+  color: var(--yellow);
+}
