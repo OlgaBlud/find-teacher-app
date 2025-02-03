@@ -1,12 +1,16 @@
+import { Suspense } from "react";
 import AppBar from "../AppBar/AppBar";
 import css from "./Layout.module.css";
-function Layout() {
+import Loader from "../Loader/Loader";
+function Layout({ children }) {
   return (
     <>
       <header className={css.header}>
         <AppBar />
       </header>
-      <main>Main</main>
+      <Suspense fallback={Loader}>
+        <main>{children}</main>
+      </Suspense>
       <footer>Footer</footer>
       {/* add Modal windows  */}
     </>
