@@ -11,7 +11,7 @@ function Layout({ children }) {
       <Suspense fallback={Loader}>
         <main>{children}</main>
       </Suspense>
-      <footer>Footer</footer>
+      <footer className={css.footer}>Coded by Olga Blud</footer>
       {/* add Modal windows  */}
     </>
   );

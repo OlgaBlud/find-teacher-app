@@ -1,0 +1,31 @@
+.statisticSection {
+  padding: 24px 64px;
+}
+
+.statisticList {
+  border: 2px dashed #f4c550;
+  border-radius: 30px;
+  padding: 40px 122px;
+  display: flex;
+  gap: 100px;
+}
+.statisticItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.statisticNumber {
+  width: 70%;
+  hyphens: none;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.14286;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+.statisticName {
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: rgba(18, 20, 23, 0.7);
+}

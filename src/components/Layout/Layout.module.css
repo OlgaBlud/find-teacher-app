@@ -5,3 +5,11 @@
   align-items: center;
   margin: 20px auto;
 }
+.footer {
+  padding: 24px 64px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: rgba(18, 20, 23, 0.7);
+}
