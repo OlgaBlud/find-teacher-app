@@ -2,8 +2,11 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import css from "./RegisterForm.module.css";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useDispatch } from "react-redux";
+import { signUp } from "../../redux/auth/operations";
 
 function RegisterForm() {
+  const dispatch = useDispatch();
   const validationSchema = yup.object({
     name: yup.string().required(),
     email: yup.string().email().required(),
@@ -21,7 +24,9 @@ function RegisterForm() {
     },
     resolver: yupResolver(validationSchema),
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    dispatch(signUp(data));
+  };
   return (
     <>
       <h2 className={css.formTitle}>Registration</h2>

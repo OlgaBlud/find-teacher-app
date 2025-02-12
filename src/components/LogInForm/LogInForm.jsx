@@ -2,8 +2,11 @@ import { useForm } from "react-hook-form";
 import css from "./LogInForm.module.css";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useDispatch } from "react-redux";
+import { signIn } from "../../redux/auth/operations";
 
 function LogInForm() {
+  const dispatch = useDispatch();
   const validationSchema = yup.object({
     email: yup.string().email().required(),
     password: yup.string().min(8).required(),
@@ -20,7 +23,9 @@ function LogInForm() {
     },
     resolver: yupResolver(validationSchema),
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    dispatch(signIn(data));
+  };
   return (
     <>
       <h2 className={css.formTitle}>Log In</h2>
